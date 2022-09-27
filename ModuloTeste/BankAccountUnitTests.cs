@@ -63,7 +63,6 @@ namespace ModuloTeste
 
         [Theory]
         [InlineData(10000)]
-
         public void WithDraw_ValidateAmountWithEnoughBalance_ShouldUpdateBalance(decimal valueInvalidTest)
         {
             var sut = new BankAccount();
