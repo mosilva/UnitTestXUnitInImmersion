@@ -1,10 +1,5 @@
 ﻿using Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
@@ -12,9 +7,11 @@ namespace Domain.Entities
     {
         Regex patern = new Regex(@"^([a-zA-Z\s]{3,}$)");
         public bool IsPalindrome(string wordPhrase)
-        { 
-            if (!(patern.IsMatch(wordPhrase))){
-                throw new InvalidAmountArgumentException("The word or phrase is invalid",nameof(wordPhrase));
+        {
+            if (!(patern.IsMatch(wordPhrase)))
+            {
+                throw new InvalidAmountArgumentException("The word or phrase is invalid"
+                    , nameof(wordPhrase));
             }
 
             wordPhrase = wordPhrase.ToLower().Replace(" ", "");
