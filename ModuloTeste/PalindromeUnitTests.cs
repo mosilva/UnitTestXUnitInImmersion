@@ -22,6 +22,7 @@ namespace Teste
         [InlineData("A123na")]
         [InlineData("da")]
         [InlineData("ééé")]
+        [InlineData("   ")]
 
         public void IsPalindrome_InvalidWordOrPhrase_ShouldThrowInvalidArgumentException(string wordPhrase)
         {
@@ -40,6 +41,7 @@ namespace Teste
         [Theory]
         [InlineData("civic")]
         [InlineData("arara")]
+        [InlineData(" civic")]
 
         public void IsPalindrome_CorrectPalindromeWord_ReturnTrue(string wordPhrase)
         {

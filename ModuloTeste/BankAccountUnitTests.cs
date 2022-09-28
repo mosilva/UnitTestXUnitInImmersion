@@ -79,8 +79,6 @@ namespace ModuloTeste
         public void WithDraw_ValidateAmountWithEnoughBalance_ShouldUpdateBalance(decimal valueInvalidTest)
         {
 
-            _sut = new BankAccount(_bankAccountRepositoryMock.Object, _valueValidAmount);
-
             _sut.Deposit(valueInvalidTest);
 
             _sut.WithDraw(_valueValidAmount);
