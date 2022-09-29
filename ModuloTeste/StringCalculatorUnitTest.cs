@@ -38,6 +38,16 @@ namespace Teste
 
         }
 
+        [Fact]
+        public void Add_WhenValidInput_ReturnSum()
+        {
+            var sut = new StringCalculator();
+
+            var result = sut.Add("1,3");
+
+            result.Should().Be(4);
+        }
+
 
         #region FirstMethodsNoRefactoring
         /*
@@ -92,17 +102,6 @@ namespace Teste
             Action add = () => sut.Add("1,a");
 
             add.Should().Throw<ArgumentException>().WithMessage("*numbers");
-        }
-
-
-        [Fact]
-        public void Add_WhenValidInput_ReturnSum()
-        {
-            var sut = new StringCalculator();
-
-            var result = sut.Add("1,3");
-
-            result.Should().Be(4);
         }
         */
         #endregion
